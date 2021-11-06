@@ -13,9 +13,17 @@ public class AccountTest
 		withDraw = sc.nextInt();
 		if(withDraw<=balance)
 		{
-			System.out.println("Amount Debited From Main Balance : "+withDraw);
-			balance = balance-withDraw;
-			System.out.println("The Balance is : "+balance);
+			if(withDraw<0)
+			{
+				System.out.println("Entered Amount is in -ve Value");
+				System.out.println("The Balance is : "+balance);
+			}
+			else
+			{
+				System.out.println("Amount Debited From Main Balance : "+withDraw);
+				balance = balance-withDraw;
+				System.out.println("The Balance is : "+balance);
+			}
 		}
 		else
 		{
